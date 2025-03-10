@@ -4,7 +4,7 @@
 
 title: Installer MPLab X IDE
 layout: page
-parent: Initiation
+parent: Mise en place
 nav_order: 2
 ---
 
