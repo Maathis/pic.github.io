@@ -16,3 +16,8 @@
   max-width: 100%;
   height: auto;
 }
+
+.resize-big-img-300 {
+  width: 300px;
+  height: auto;
+}

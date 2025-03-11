@@ -8,3 +8,4 @@ nav_order: 2
 ---
 
 Pour gérer les caractéristiques du microcontrolleur et de ses broches, il faut passer par des registres. Les registres sont des mémoires au sein de la puce qui stock des informations.
+

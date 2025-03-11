@@ -9,30 +9,32 @@ nav_order: 1
 ---
 
 
-Le kit de développement est un élément indispensable pour développer sur un microcontrolleur PIC. Ce dernier coute plus ou moins cher, pour ce tutoriel, j'utiliserai un clone qui est achetable sur aliexpress pour une quinzaine d'euros et fait parfaitement le travail pour des projets personnels.
+Le kit de développement est un élément indispensable pour programmer un microcontrôleur PIC. Son coût varie, mais pour ce tutoriel, j'utiliserai un clone disponible sur AliExpress pour une quinzaine d'euros, qui remplit parfaitement son rôle pour des projets personnels.
 
-Pour les personnes voulant la référence : [Lien vers aliexpress](https://fr.aliexpress.com/item/1005005973904576.html?spm=a2g0o.order_list.order_list_main.5.7bad5e5bHLNZnV&gatewayAdapt=glo2fra)
+Pour ceux qui souhaitent la référence : [Lien vers aliexpress](https://fr.aliexpress.com/item/1005005973904576.html?spm=a2g0o.order_list.order_list_main.5.7bad5e5bHLNZnV&gatewayAdapt=glo2fra)
 
-On peut utiliser ce kit de deux manières. La première consiste à utiliser le support fourni avec le microcontrolleur et la seconde à brancher directement le PICKit sur la plaque de test où se trouve votre circuit éléctronique. Ces deux méthodes vont être détaillées dans la suite de ce document.
+Ce kit peut être utilisé de deux manières. La première consiste à utiliser le support fourni avec le microcontrôleur, et la seconde à brancher directement le PICKit sur la plaque de test où se trouve votre circuit électronique. Ces deux méthodes seront détaillées dans la suite de cette page.
 
 ## PICKit 3 non détécté par MPLAB
 
+Si vous rencontrez cette erreur au lancement de MPLab IDE avec votre boîtier branché, désinstallez-le puis installez une version plus ancienne de MPLab IDE. Votre version actuelle est probablement trop récente et ne prend pas encore en charge le PICKit 3.
+
 ![alt text](mplab_pickit-1.png)
 
-{: .warning }
-La version de votre MPLab est trop récente, rétrograder cette dernière à une version inférieure.
-
 ## Utilisation du support
-Voici le support qui est fourni avec le PICKit, il permet de brancher un large éventail de microcontrolleurs. Voici une explication de chaque élément présent sur le support.
 
-![alt text](mplab_pickit-2.jpg)
+Voici le support fourni avec le PICKit. Il permet de connecter un large éventail de microcontrôleurs. Voici une explication de chaque élément présent sur ce support.
+
+![alt text](mplab_pickit-2.jpg){: .resize-big-img-300 .centered-image}
 
 - En orange : les emplacements des broches ;
 - En bleu : le levier permettant de bloquer les broches pour établir la connexion physique entre le support et votre puce ;
-- En violet : Très important, des cavaliers ou jumper en anglais, pour configurer votre support en fonction de votre puce (voir partie suivante) ;
-- En vert : les broches pour brancher le PICKit au support.
+- En violet : très important, les cavaliers (ou jumpers en anglais), utilisés pour configurer votre support en fonction de votre puce (voir la section suivante) ;
+- En vert : les broches pour connecter le PICKit au support.
 
-A l'arrière, on retrouve des dessins qui indique comment configurer le support physiquement avec les cavaliers (jumper) vus ci-dessus. 
+À l'arrière, on trouve des dessins indiquant comment configurer physiquement le support avec les cavaliers (jumpers) mentionnés ci-dessus.
+
+Extrait du tableau à l'arrière :
 
 | **DIP 28,40**      | J1: 3 | J2      | J3      | J4 | J5 | J6 | J7: 2-3 |
 | **DIP 8,14,18,20** | J1: 2 | J2      | J3      | J4 | J5 | J6 | J7: 2-3 |
@@ -40,23 +42,25 @@ A l'arrière, on retrouve des dessins qui indique comment configurer le support 
 | **PIC16F57**       | J1: 3 | J2: 1-2 | J3      | J4 | J5 | J6 | J7: 2-3 |
 | **PIC16F59**       | J1: 2 | J2      | J3: 2-3 | J4 | J5 | J6 | J7: 1-2 |
 
-![alt text](mplab_pickit-3.jpg)
+![alt text](mplab_pickit-3.jpg){: .resize-big-img-300 .centered-image}
 
-Voici un exemple, si j'ai un PIC16F1827 qui a 18 broches, donc DIP 18. J'ai mis en orange les broches obligatoires à avoir et la trace de la puce qui indique comment la placer sur le support.
+### Exemple pour PIC16F1827
+Le PIC16F1827 dispose de 18 broches, soit un format DIP 18. J'ai mis en orange les broches essentielles à connecter sur la face du support, ainsi que la trace de la puce indiquant la manière de la placer sur le support.
 
-![alt text](mplab_pickit-3-example.jpg)
+![alt text](mplab_pickit-3-example.jpg){: .resize-big-img-300 .centered-image}
 
-Une fois la configuration du support faite, **baisser le levier vert pour bloquer la puce**, puis il ne vous reste plus qu'à connecter ce dernier au PICKit et de le relier en USB à votre ordinateur. 
+Une fois la configuration du support effectuée, abaissez le levier vert pour bloquer la puce. Il ne vous reste alors plus qu'à connecter ce dernier au PICKit et à le relier en USB à votre ordinateur.
 
-![alt text](mplab_pickit-4.jpg)
+![alt text](mplab_pickit-4.jpg){: .resize-big-img-300 .centered-image}
 
 ## Utilisation du PICKit directement
 
-La méthode présentée ci-dessus n'est pas très pratique si vous souhaitez tester votre code puisqu'il faut retirer la puce et la mettre dans votre circuit et vice-versa pour modifier le code. Le plus simple est de brancher directement le PICKit à votre puce sur votre circuit. Vous trouverez ci-dessous un exemple toujours avec le PIC16F1827. Les informations sont disponibles dans le tableau récapitulatif des broches dans la datasheet.
+La méthode présentée ci-dessus n'est pas très pratique si vous souhaitez tester votre code, car il faut retirer la puce et la placer dans votre circuit, puis la remettre sur le support pour modifier le code. Le plus simple est de brancher directement le PICKit à votre puce, sur votre circuit. Vous trouverez ci-dessous un exemple avec le PIC16F1827. Pour les autres puces, les informations nécessaires sont disponibles dans le tableau récapitulatif des broches dans la datasheet.
+
+{: .remind}
+Le branchement direct permet également au PICKit 3 d'alimenter votre circuit, à condition que ce dernier ne soit pas trop exigeant, comme pour des LED.
 
 <div class="image-grid">
   <img src="mplab_pickit-5.png" alt="" />
   <img src="mplab_pickit-5-pic.png" alt="PIC16F1827 pins" />
 </div>
-
-Le branchement direct permet aussi au PICKit 3 d'alimenter votre circuit si ce dernier n'est pas trop demandant, comme des leds. Ainsi, les modifications apportées à votre programme sont directements appliquées et visibles.
