@@ -54,6 +54,9 @@ collections:
   developer:
     output: true
     permalink: /:collection/:name
+  projects:
+    output: true
+    permalink: /:collection/:name
 
 just_the_docs:
   nav_order: true
@@ -63,6 +66,9 @@ just_the_docs:
       output: true
     developer:
       name: "Aspect logiciel"
+      output: true
+    projects:
+      name: "Projets"
       output: true
 # Exclude from processing.
 # The following items will not be processed, by default.

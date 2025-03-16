@@ -8,16 +8,14 @@ permalink: /:collection/:name
 nav_order: 1
 ---
 
-TODO: clarifier le PIC et ESP32
-
 # Présentation générale
 
-Les microcontrolleurs sont des puces éléctroniques qui permettent d'ajouter de la logique dans un circuit éléctronique. Pour ce faire, ces puces vont gérer des ports GPIO qui vont être soit une entrée soit une sortie. Les microcontrolleurs les plus connus par le grand public sont ceux d'Arduino qui sont bien présentés avec une carte, port USB pour communiquer.
+Les microcontrolleurs sont des puces éléctroniques qui permettent d'ajouter de la logique dans un circuit éléctronique. Pour ce faire, ces puces vont gérer des ports GPIO qui vont être soit une entrée soit une sortie. Les microcontrolleurs les plus connus par le grand public sont ceux d'Arduino. Ces derniers sont intégrés à des cartes sur lesquels on ajoute des éléments supplémentaires pour faciliter le développement comme des ports USB. Il s'agit en réalité juste d'un microcontrolleur qui est bien présenté.
 
-En réalité, il s'agit juste d'un microcontrolleur qui est bien présenté avec des commodités pour rendre son utilisation moins prise de tête. Vous trouverez ci-dessous un exemple, avec le microcontrolleur encadré en rouge et les GPIO encadrés en orange.
-
-![Carte Arduino](arduino.png){: .centered-image }
-
+<div class="image-grid">
+  <img src="arduino.png" alt="Arduino 1" />
+  <img src="arduino2.jpg" alt="Arduino 2" />
+</div>
 
 Certains GPIO peuvent avoir des fonctionnalités additonnelles :
 - Compatibilité avec des protocoles (ICC qu'on appelle aussi I²C, PWD, UART...etc)
@@ -27,19 +25,11 @@ et pleins d'autres encore.
 
 # Différence entre microcontrolleur et microprocesseur
 
-Il y a deux caractéristiques importantes qui les différencie.
+Un point important à comprendre ; est la difference entre un microcontrolleur et un microprocesseur.Il y a deux caractéristiques importantes qui les différencie.
 
-## Composition des puces
+La première concerne la structure d'un microcontrolleur. Celui-ci regroupe en son sein un microprocesseur, une mémoire et des périphiques (les GPIO). Alors qu'un microprocesseur n'a que son unité de calcul. Il ne peut donc rien stocker, il a donc besoin de composants externes (RAM, disques durs...). Un microcontrolleur peut donc fonctionner de manière autonome à l'inverse d'un microprocesseur.
 
-un microcontrolleur regroupe en son sein un microprocesseur, une mémoire et des périphiques (les GPIO).
-
-Un microprocesseur n'a que son unité de calcul. Il ne peut donc rien stocker, il a donc besoin de composants externes (RAM, disques durs...).
-
-Un microcontrolleur peut donc fonctionner de manière autonome à l'inverse d'un microprocesseur.
-
-## Exécution de tâches
-
-Un microcontrolleur ne peut réaliser qu'une tâche à la fois, alors lorsqu'on utilise ce type de composant, on va lui faire faire une tâche bien précise. A contrario, un microprocesseur peut effectuer plusieurs tâches simultanéments.
+La deuxième est que le microcontrolleur ne peut réaliser qu'une tâche à la fois, alors lorsqu'on utilise ce type de composant, on va lui faire faire une tâche bien précise. A contrario, un microprocesseur peut effectuer plusieurs tâches simultanéments.
 
 # Les formats
 
@@ -53,8 +43,4 @@ Un même microcontrolleur peut avoir plusieurs format, ce qui impacte son implé
 
 Nous le verrons dans la partie sur les entrées / sorties, il faut faire attention lorsqu'on lit une datasheet à ne pas se tromper de format.
 
-// Expliquer DIP
-
-# Consommation d'énergie
-
-La consommation d'energie dépend des fonctionnalités du microcontroller. Si je reprends l'exemple du PIC16F1827, sa consommation d'énergie est très faible et peut être mesuré en μA (10^-6 ampères). Si nous regardons ce même point chez un ESP32, qui est un microcontrolleur qui possède des fonctionnalités avancées (Bluetooth, WiFi) et que nous activons toutes ses options nous arrivons à 160mA.
+A noter, si vous regardez cette partie d'une documentation il se peut que le terme **DIP XX** revienne, où **XX** est un nombre. Ce dernier indique le nombre de broches que la puce possède (ex: DIP18, DIP40...).
