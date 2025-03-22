@@ -28,7 +28,12 @@ Ensuite, choisissez l'emplacement où l'IDE sera installé sur votre ordinateur,
 Sélectionnez les éléments qui vous intéressent. Si vous ne savez pas, cochez toutes les cases.
 ![alt text](mplab_step-4.png)
 
-L'installateur va télécharger, extraire et installer correctement chaque composant. L'installation prend un certain temps. Une fois terminée, une fenêtre s'ouvre et vous demande quel(s) compilateur(s) vous souhaitez installer. Référez-vous à la section ci-dessous pour plus de détails.
+L'installateur va télécharger, extraire et installer correctement chaque composant. Cela prend un certain temps. Une fois fait, plusieurs messages vont apparaître pour demander l'autorisation d'installer un nouveau périphérique. Cocher sur chaque message la case, puis cliquer sur **Installer**. 
+
+Voici un exemple de message :
+![alt text](mplab_step-4.1.png)
+
+Une fois terminée, une fenêtre s'ouvre et vous demande quel(s) compilateur(s) vous souhaitez installer. Référez-vous à la section ci-dessous pour plus de détails.
 
 ## Installation du/des compilateurs
 

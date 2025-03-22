@@ -2,24 +2,21 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: Kit de développement (IMPORTANT!)
+title: Kit de développement
 layout: page
 parent: Mise en place
 nav_order: 1
 ---
 
+# Kit de développement
 
-Le kit de développement est un élément indispensable pour programmer un microcontrôleur PIC. Son coût varie, mais pour ce tutoriel, j'utiliserai un clone disponible sur AliExpress pour une quinzaine d'euros, qui remplit parfaitement son rôle pour des projets personnels.
+Le kit de développement est un élément indispensable pour programmer un microcontrôleur PIC. Son coût varie, mais pour ce tutoriel, j'utiliserai un clone disponible sur AliExpress pour une quinzaine d'euros, qui remplit parfaitement son rôle pour des projets personnels. Vous pourrez accéder à toutes les fonctionnalités de l'environnement de développement.
 
 Pour ceux qui souhaitent la référence : [Lien vers aliexpress](https://fr.aliexpress.com/item/1005005973904576.html?spm=a2g0o.order_list.order_list_main.5.7bad5e5bHLNZnV&gatewayAdapt=glo2fra)
 
 Ce kit peut être utilisé de deux manières. La première consiste à utiliser le support fourni avec le microcontrôleur, et la seconde à brancher directement le PICKit sur la plaque de test où se trouve votre circuit électronique. Ces deux méthodes seront détaillées dans la suite de cette page.
 
-## PICKit 3 non détécté par MPLAB
-
-Si vous rencontrez cette erreur au lancement de MPLab IDE avec votre boîtier branché, désinstallez-le puis installez une version plus ancienne de MPLab IDE. Votre version actuelle est probablement trop récente et ne prend pas encore en charge le PICKit 3.
-
-![alt text](mplab_pickit-1.png)
+Si vous rencontrez un problème, vérifiez si je n'en ai pas parlé dans la partie **Problèmes** en bas de page.
 
 ## Utilisation du support
 
@@ -47,6 +44,8 @@ Extrait du tableau à l'arrière :
 ### Exemple pour PIC16F1827
 Le PIC16F1827 dispose de 18 broches, soit un format DIP 18. J'ai mis en orange les broches essentielles à connecter sur la face du support, ainsi que la trace de la puce indiquant la manière de la placer sur le support.
 
+Dans le tableau sur la ligne **DIP 8,14,18,20**, on peut voir **J1: 2**, cela indique qu'il faut mettre le jumper **J1** sur l'emplacement **2**. Puis, placer votre puce sur le support, pour la PIC16F1827, il faut la mettre dans la trace du DIP18 (la forme encadrée en orange, **ATTENTION au sens avec le repère !**)
+
 ![alt text](mplab_pickit-3-example.jpg){: .resize-big-img-300 .centered-image}
 
 Une fois la configuration du support effectuée, abaissez le levier vert pour bloquer la puce. Il ne vous reste alors plus qu'à connecter ce dernier au PICKit et à le relier en USB à votre ordinateur.
@@ -64,3 +63,12 @@ Le branchement direct permet également au PICKit 3 d'alimenter votre circuit, �
   <img src="mplab_pickit-5.png" alt="" />
   <img src="mplab_pickit-5-pic.png" alt="PIC16F1827 pins" />
 </div>
+
+En général trouver le MCLR, VDD et VSS n'est pas très compliqué. Pour les deux derniers (PGD et PGC), chercher dans votre datasheet, soit ces noms ou leur nom entre parenthèse sur la photo gauche ci-dessus (ICSPDAT et ICSPCLK).
+
+## Problèmes
+### PICKit 3 non détécté par MPLAB
+
+Si vous rencontrez cette erreur au lancement de MPLab IDE avec votre boîtier branché, désinstallez-le puis installez une version plus ancienne de MPLab IDE. Votre version actuelle est probablement trop récente et ne prend pas encore en charge le PICKit 3.
+
+![alt text](mplab_pickit-1.png)

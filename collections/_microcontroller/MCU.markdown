@@ -20,16 +20,15 @@ Les microcontrolleurs sont des puces éléctroniques qui permettent d'ajouter de
 Certains GPIO peuvent avoir des fonctionnalités additonnelles :
 - Compatibilité avec des protocoles (ICC qu'on appelle aussi I²C, PWD, UART...etc)
 - Fonctionnalité de conversions : analogique vers digital ou l'inverse
-- Watchdog
 et pleins d'autres encore.
 
 # Différence entre microcontrolleur et microprocesseur
 
 Un point important à comprendre ; est la difference entre un microcontrolleur et un microprocesseur.Il y a deux caractéristiques importantes qui les différencie.
 
-La première concerne la structure d'un microcontrolleur. Celui-ci regroupe en son sein un microprocesseur, une mémoire et des périphiques (les GPIO). Alors qu'un microprocesseur n'a que son unité de calcul. Il ne peut donc rien stocker, il a donc besoin de composants externes (RAM, disques durs...). Un microcontrolleur peut donc fonctionner de manière autonome à l'inverse d'un microprocesseur.
+- La première concerne la structure d'un microcontrolleur. Celui-ci regroupe en son sein un microprocesseur, une mémoire et des périphiques (les GPIO). Alors qu'un microprocesseur n'a que son unité de calcul. Il ne peut donc rien stocker, il a donc besoin de composants externes (RAM, disques durs...). Un microcontrolleur peut donc fonctionner de manière autonome à l'inverse d'un microprocesseur.
 
-La deuxième est que le microcontrolleur ne peut réaliser qu'une tâche à la fois, alors lorsqu'on utilise ce type de composant, on va lui faire faire une tâche bien précise. A contrario, un microprocesseur peut effectuer plusieurs tâches simultanéments.
+- La deuxième est que le microcontrolleur ne peut réaliser qu'une tâche à la fois, alors lorsqu'on utilise ce type de composant, on va lui faire faire une tâche bien précise. A contrario, un microprocesseur peut effectuer plusieurs tâches simultanéments.
 
 # Les formats
 
@@ -43,4 +42,4 @@ Un même microcontrolleur peut avoir plusieurs format, ce qui impacte son implé
 
 Nous le verrons dans la partie sur les entrées / sorties, il faut faire attention lorsqu'on lit une datasheet à ne pas se tromper de format.
 
-A noter, si vous regardez cette partie d'une documentation il se peut que le terme **DIP XX** revienne, où **XX** est un nombre. Ce dernier indique le nombre de broches que la puce possède (ex: DIP18, DIP40...).
+A noter, si vous regardez cette partie d'une documentation il se peut que le terme **DIP XX** revienne, où **XX** est un nombre. Ce dernier indique le nombre de broches que la puce possède (ex: DIP18, DIP40...). Le mot 'broche' n'est pas forcement un pique, il peut s'agir aussi juste d'une surface limité qui sert de point de contact pour transmettre/remplir un role. Si l'on regarde les trois images ci-dessus, l'image de droite nous voyons clairement des broches mais celui à gauche a juste XX surfaces de contact.
