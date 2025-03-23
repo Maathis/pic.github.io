@@ -7,6 +7,8 @@ layout: page
 nav_order: 2
 ---
 
+# Configurer le microcontrolleur
+
 La configuration d'un microcontrolleur peut être long et complexe du fait au nombreux éléments sur lesquels on doit faire attention. MPLab IDE propose une fonctionnalité de construction du programme pour créer la base (configuration de l'horloge, des ports...), ainsi on gagne du temps et on est sûr de ne rien oublier.
 
 Pour accéder à cette fonctionnalité, cliquer sur le logo **MCC** dans la barre en haut à gauche.
@@ -16,24 +18,15 @@ Un chargement va se lancer qui prend plus ou moins du temps, et un onglet **Appl
 
 ![alt text](image-3.png)
 
-Si un autre onglet s'ouvre avec un tableau et une liste de composants, cela signifie que vous devez mettre à jour les plugins de votre MBLab. Regarder la partie ci-dessous pour régler ce problème.
+Si un autre onglet s'ouvre avec un tableau et une liste de composants comme la capture d'écran ci-dessous, cela signifie que vous devez mettre à jour les plugins de votre MPLab. Regarder dans la liste des problèmes à la fin de la page pour mettre à jour les composants.
+
+Vérifier tout de même si le tableau que vous avez ne concerne pas juste des dépendances que vous n'avez pas, si c'est le cas, vous trouverez un bouton "Finish" en bas à droite. En cliquant dessus cela lancera un chargement et le configurateur apparaîtra.
 
 ![alt text](image-1.png)
-
-## Mettre à jour les plugins de MPLab x IDE. 
-
-Ouvrez le menu déroulant de la barre en haut à gauche s'appelant **Tools**, puis **Plugins**.
-![alt text](image-4.png)
-
-Cocher tous les composants de l'onglet **Updates** et cliquer sur le bouton **Update** en bas. Accepter les conditions d'utilisiation et procéder à l'installation.
-![alt text](image.png)
-
-Penser à redémarrer votre MPLab IDE une fois que c'est fini si cela ne se fait pas automatiquement.
 
 ## Générer la code de base de votre projet
 
-L'onglet **Application Builder** permet de d'accéder à plusieurs caractéristiques de votre puce. Vous pouvez configurer ces dernières en passant par les menus.
-![alt text](image-1.png)
+L'onglet **Application Builder** permet de d'accéder à plusieurs caractéristiques de votre puce. Vous pouvez configurer ces dernières en passant par les menus. Pour éviter de faire 15 pages sur la configuration des différentes fonctionnalités, vous trouverez dans cette documentation une liste de projet que j'ai fait. Ainsi, vous trouverez les détails de comment configurer des ports, l'horloge....
 
 Une fois votre configuration finie, générer votre configuration en cliquant sur le bouton **Generate** dans l'onglet **Project Ressources**.
 
@@ -55,3 +48,21 @@ int main(void)
     }    
 }
 ```
+
+## Problèmes
+
+### Mettre à jour les plugins de MPLab x IDE. 
+
+Ouvrez le menu déroulant de la barre en haut à gauche s'appelant **Tools**, puis **Plugins**.
+![alt text](image-4.png)
+
+Cocher tous les composants de l'onglet **Updates** et cliquer sur le bouton **Update** en bas. 
+![alt text](image-7.png)
+
+Une fenêtre qui résume les mises à jour qui vont être faites apparaît, cliquer sur "Next".
+![alt text](image.png)
+
+Un téléchargement se lance et une nouvelle fenêtre avec des conditions d'utilisation s'ouvre. Cocher la case et cliquer sur "Update".
+![alt text](image-8.png)
+
+Une téléchargement se lance, à la fin une fenêtre vous demandant si vous voulez redémarrer tout de suite ou plus tard apparaît. Cocher "Restart Now" et cliquer sur "Finish".
