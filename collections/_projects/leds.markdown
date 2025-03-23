@@ -22,6 +22,16 @@ Le circuit est allimenté par le kit de developpement (PICKit).
 
 Réferrez-vous à cette partie pour la base : [Générer le code de base](/developer/gen-codebase)
 
+Rendez-vous dans l'onglet "Application builder", cliquer sur "Pins", un onglet s'ouvre.
+![alt text](pr1-gen-codebase-1.png)
+
+Définiser les ports B : 1, 2 et 3 en sortie (output). Cliquer sur les cadenas pour qu'ils deviennent vert.
+
+![alt text](pr1-gen-codebase-2.png)
+
+Générer le code de base en cliquant sur le bouton "Generate" dans l'onglet "Project Resources".
+![alt text](pr1-gen-codebase-3.png)
+
 ## Code
 
 ```c
