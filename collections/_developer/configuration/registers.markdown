@@ -4,6 +4,7 @@
 
 title: Les registres
 layout: page
+parent: Configuration du microcontrolleur
 nav_order: 2
 ---
 

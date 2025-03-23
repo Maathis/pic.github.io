@@ -2,27 +2,28 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: Configurer le microcontrolleur
+title: Générer le code de base
 layout: page
+parent: Configuration du microcontrolleur
 nav_order: 2
 ---
 
-# Configurer le microcontrolleur
+# Génération du code de base
 
 La configuration d'un microcontrolleur peut être long et complexe du fait au nombreux éléments sur lesquels on doit faire attention. MPLab IDE propose une fonctionnalité de construction du programme pour créer la base (configuration de l'horloge, des ports...), ainsi on gagne du temps et on est sûr de ne rien oublier.
 
 Pour accéder à cette fonctionnalité, cliquer sur le logo **MCC** dans la barre en haut à gauche.
-![alt text](image-2.png)
+![alt text](gencode-2.png)
 
 Un chargement va se lancer qui prend plus ou moins du temps, et un onglet **Application Builder** doit apparaître.
 
-![alt text](image-3.png)
+![alt text](gencode-3.png)
 
 Si un autre onglet s'ouvre avec un tableau et une liste de composants comme la capture d'écran ci-dessous, cela signifie que vous devez mettre à jour les plugins de votre MPLab. Regarder dans la liste des problèmes à la fin de la page pour mettre à jour les composants.
 
 Vérifier tout de même si le tableau que vous avez ne concerne pas juste des dépendances que vous n'avez pas, si c'est le cas, vous trouverez un bouton "Finish" en bas à droite. En cliquant dessus cela lancera un chargement et le configurateur apparaîtra.
 
-![alt text](image-1.png)
+![alt text](gencode-1.png)
 
 ## Générer la code de base de votre projet
 
@@ -30,11 +31,13 @@ L'onglet **Application Builder** permet de d'accéder à plusieurs caractéristi
 
 Une fois votre configuration finie, générer votre configuration en cliquant sur le bouton **Generate** dans l'onglet **Project Ressources**.
 
-![alt text](image-5.png)
+
+
+![alt text](gencode-5.png)
 
 Lorsque vous avez fait cela, vous pouvez constater dans votre projet que de nouveaux fichiers ont été générés.
 
-![alt text](image-6.png)
+![alt text](gencode-6.png)
 
 Le code de base exécute une fonction en premier pour configurer les registres avec vos valeurs.
 ```c++
@@ -54,15 +57,19 @@ int main(void)
 ### Mettre à jour les plugins de MPLab x IDE. 
 
 Ouvrez le menu déroulant de la barre en haut à gauche s'appelant **Tools**, puis **Plugins**.
-![alt text](image-4.png)
+
+![alt text](gencode-4.png)
 
 Cocher tous les composants de l'onglet **Updates** et cliquer sur le bouton **Update** en bas. 
-![alt text](image-7.png)
+
+![alt text](gencode-7.png)
 
 Une fenêtre qui résume les mises à jour qui vont être faites apparaît, cliquer sur "Next".
-![alt text](image.png)
+
+![alt text](gencode.png)
 
 Un téléchargement se lance et une nouvelle fenêtre avec des conditions d'utilisation s'ouvre. Cocher la case et cliquer sur "Update".
-![alt text](image-8.png)
+
+![alt text](gencode-8.png)
 
 Une téléchargement se lance, à la fin une fenêtre vous demandant si vous voulez redémarrer tout de suite ou plus tard apparaît. Cocher "Restart Now" et cliquer sur "Finish".
