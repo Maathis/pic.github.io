@@ -20,8 +20,10 @@
 
 title: Guide sur les PIC
 email: your-email@example.com
+author: "Mathis Morais"
+locale: fr_FR
 description: >- # this means to ignore newlines until "baseurl:"
-  Documentation sur les microcontrôleurs PIC de Microchip, 
+  Documentation sur les microcontrôleurs PIC Microchip, 
   abordant à la fois la partie matérielle et logicielle.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -45,6 +47,7 @@ callouts:
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 collections_dir: collections
 collections:
@@ -70,6 +73,9 @@ just_the_docs:
     projects:
       name: "Projets"
       output: true
+
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

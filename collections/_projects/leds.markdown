@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: '#1 Allumer des leds'
+title: '#1 Défilement de leds automatiquement'
 layout: page
 permalink: /:collection/:name
 nav_order: 1
@@ -15,6 +15,8 @@ Ce projet est simple, nous prenons 3 leds qui doivent s'allumer chacune leur tou
 ## Branchements
 
 Le circuit est allimenté par le kit de developpement (PICKit).
+
+pickit_2 = 4.75V | pickit_3 = GND
 
 ![alt text](pr1-schema.png)
 
@@ -62,3 +64,7 @@ int main(void)
     }    
 }
 ```
+
+## Resultat
+
+![alt text](project_1.gif)
