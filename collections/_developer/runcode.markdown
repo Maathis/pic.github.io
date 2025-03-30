@@ -9,20 +9,21 @@ nav_order: 2
 
 # Exécuter du code
 
-Si vous êtes habituer aux environnements de développement, vous pouvez penser que faire tourner votre code sur le microcontrolleur est facile. Vous avez raison, mais à quelques subtilités près.
+Si vous êtes habitué aux environnements de développement, vous pouvez penser que faire tourner votre code sur le microcontrôleur est facile. Vous avez raison, mais à quelques subtilités près.
 
-Brancher votre kit de développement à votre ordinateur via le cable USB. Rendez-vous sur votre projet MPLab et cliquer sur l'icone play sur la barre de navigation en haut de votre écran.
+Brancher votre kit de développement à votre ordinateur via le câble USB. Rendez-vous sur votre projet MPLab et cliquez sur l'icône play dans la barre de navigation en haut de votre écran.
 
 ![alt text](runcode-1.png)
 
-Si vous n'avez pas relier votre projet à votre kit de développement, une fenêtre s'ouvre vous demandant de séléctionner un outil. Séléctionner votre kit dans la liste et cliquer sur "OK".
+Si vous n'avez pas relié votre projet à votre kit de développement, une fenêtre s'ouvre vous demandant de sélectionner un outil. Sélectionnez votre kit dans la liste et cliquez sur "OK".
+
 ![alt text](runcode-1.png)
 
-Si vous regardez en bas de votre écran, des onglets s'ouvre. Un qui concerne la compilation de votre code et un autre qui indique l'état de transfère de votre code à votre microcontrolleur. Après la compilation de votre code, une fenêtre avec une icone danger s'ouvre et vous demande si vous avez bien séléctionner le bon microcontrolleur lorsque vous avez créé votre projet. Cliquer sur "OK".
+Si vous regardez en bas de votre écran, des onglets s'ouvrent. Un qui concerne la compilation de votre code et un autre qui indique l'état du transfert de votre code à votre microcontrôleur. Après la compilation de votre code, une fenêtre avec une icône danger s'ouvre et vous demande si vous avez bien sélectionné le bon microcontrôleur lorsque vous avez créé votre projet. Cliquez sur "OK".
 
 ![alt text](runcode-2.png)
 
-Le programme va ensuite se transférer dans votre microcontrolleur.
+Le programme va ensuite se transférer dans votre microcontrôleur.
 
 ![alt text](runcode-9.png)
 
@@ -34,27 +35,36 @@ Le programme va ensuite se transférer dans votre microcontrolleur.
 Si vous avez ce message d'erreur, alors il se peut que vous ayez le problème d'après sur le voltage trop faible.
 
 Dans le cas où vous avez un message d'erreur comme celui-ci :
+
 ![alt text](runcode-3.png)
 
-Rendez-vous dans l'onglet "Projet", faites un clique droit sur votre projet et séléctionner "Properties".
+Rendez-vous dans l'onglet "Projet", faites un clic droit sur votre projet et sélectionnez "Properties".
+
 ![alt text](runcode-4.png)
 
-Aller dans le menu "PICkit 3", puis faites dérouler le menu et séléctionner "Power".
+Allez dans le menu "PICkit 3", puis faites dérouler le menu et sélectionnez "Power".
+
 ![alt text](runcode-5.png)
 
-Cocher la case "Power target circuit from PICkit3" pour que votre kit de développement alimente votre circuit.
+Cochez la case "Power target circuit from PICkit3" pour que votre kit de développement alimente votre circuit.
+
 ![alt text](runcode-6.png)
+
 
 ### Voltage fourni trop faible
 
 Dans le cas où vous avez un message d'erreur comme celui-ci :
+
 ![alt text](runcode-7.png)
 
-Rendez-vous dans l'onglet "Projet", faites un clique droit sur votre projet et séléctionner "Properties".
+Rendez-vous dans l'onglet "Projet", faites un clic droit sur votre projet et sélectionnez "Properties".
+
 ![alt text](runcode-4.png)
 
-Aller dans le menu "PICkit 3", puis faites dérouler le menu et séléctionner "Power".
+Allez dans le menu "PICkit 3", puis faites dérouler le menu et sélectionnez "Power".
+
 ![alt text](runcode-5.png)
 
-Séléctionner le courant qui a été mesuré. Pour le connaître, regarder le message d'erreur. Dans la capture d'écran au-dessus il s'agit de 4.75 Volts.
+Sélectionnez le courant qui a été mesuré. Pour le connaître, regardez le message d'erreur. Dans la capture d'écran ci-dessus, il s'agit de 4.75 Volts.
+
 ![alt text](runcode-8.png)

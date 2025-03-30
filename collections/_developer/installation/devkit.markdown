@@ -10,9 +10,9 @@ nav_order: 1
 
 # Kit de développement
 
-Le kit de développement est un élément indispensable pour programmer un microcontrôleur PIC. Son coût varie, mais pour ce tutoriel, j'utiliserai un clone disponible sur AliExpress pour une quinzaine d'euros, qui remplit parfaitement son rôle pour des projets personnels. Vous pourrez accéder à toutes les fonctionnalités de l'environnement de développement.
+Le kit de développement est un élément indispensable pour programmer un microcontrôleur PIC. Son coût varie, mais pour ce tutoriel, j'utiliserai un clone disponible sur AliExpress pour environ une quinzaine d'euros, qui remplit parfaitement son rôle pour des projets personnels. Vous pourrez accéder à toutes les fonctionnalités de l'environnement de développement.
 
-Pour ceux qui souhaitent la référence : [Lien vers aliexpress](https://fr.aliexpress.com/item/1005005973904576.html?spm=a2g0o.order_list.order_list_main.5.7bad5e5bHLNZnV&gatewayAdapt=glo2fra)
+Pour ceux qui souhaitent la référence : [Lien vers AliExpress](https://fr.aliexpress.com/item/1005005973904576.html?spm=a2g0o.order_list.order_list_main.5.7bad5e5bHLNZnV&gatewayAdapt=glo2fra)
 
 Ce kit peut être utilisé de deux manières. La première consiste à utiliser le support fourni avec le microcontrôleur, et la seconde à brancher directement le PICKit sur la plaque de test où se trouve votre circuit électronique. Ces deux méthodes seront détaillées dans la suite de cette page.
 
@@ -26,10 +26,10 @@ Voici le support fourni avec le PICKit. Il permet de connecter un large éventai
 
 - En orange : les emplacements des broches ;
 - En bleu : le levier permettant de bloquer les broches pour établir la connexion physique entre le support et votre puce ;
-- En violet : très important, les cavaliers (ou jumpers en anglais), utilisés pour configurer votre support en fonction de votre puce (voir la section suivante) ;
+- En violet : très important, les cavaliers (aussi appelés "jumpers" en anglais), utilisés pour configurer votre support en fonction de votre puce (voir la section suivante) ;
 - En vert : les broches pour connecter le PICKit au support.
 
-À l'arrière, on trouve des dessins indiquant comment configurer physiquement le support avec les cavaliers (jumpers) mentionnés ci-dessus.
+À l'arrière, on trouve des dessins indiquant comment configurer physiquement le support avec les cavaliers ("jumpers") mentionnés ci-dessus.
 
 Extrait du tableau à l'arrière :
 
@@ -42,9 +42,10 @@ Extrait du tableau à l'arrière :
 ![alt text](mplab_pickit-3.jpg){: .resize-big-img-300 .centered-image}
 
 ### Exemple pour PIC16F1827
-Le PIC16F1827 dispose de 18 broches, soit un format DIP 18. J'ai mis en orange les broches essentielles à connecter sur la face du support, ainsi que la trace de la puce indiquant la manière de la placer sur le support.
 
-Dans le tableau sur la ligne **DIP 8,14,18,20**, on peut voir **J1: 2**, cela indique qu'il faut mettre le jumper **J1** sur l'emplacement **2**. Puis, placer votre puce sur le support, pour la PIC16F1827, il faut la mettre dans la trace du DIP18 (la forme encadrée en orange, **ATTENTION au sens avec le repère !**)
+Le PIC16F1827 dispose de 18 broches, soit un format DIP 18. J'ai mis en orange les broches essentielles à connecter sur la face du support de programmation, ainsi que le marquage de la puce indiquant la manière de la placer sur le support.
+
+Dans le tableau, sur la ligne **DIP 8,14,18,20**, on peut voir **J1: 2**, cela indique qu'il faut mettre le jumper **J1** sur l'emplacement **2**. Ensuite, placez votre puce sur le support. Pour la PIC16F1827, il faut la mettre dans la trace du DIP18 (la forme encadrée en orange, **ATTENTION au sens avec le repère !**).
 
 ![alt text](mplab_pickit-3-example.jpg){: .resize-big-img-300 .centered-image}
 
@@ -54,7 +55,7 @@ Une fois la configuration du support effectuée, abaissez le levier vert pour bl
 
 ## Utilisation du PICKit directement
 
-La méthode présentée ci-dessus n'est pas très pratique si vous souhaitez tester votre code, car il faut retirer la puce et la placer dans votre circuit, puis la remettre sur le support pour modifier le code. Le plus simple est de brancher directement le PICKit à votre puce, sur votre circuit. Vous trouverez ci-dessous un exemple avec le PIC16F1827. Pour les autres puces, les informations nécessaires sont disponibles dans le tableau récapitulatif des broches dans la datasheet.
+La méthode présentée ci-dessus n'est pas très pratique si vous souhaitez tester votre code, car il faut retirer la puce et la placer dans votre circuit, puis la remettre sur le support pour modifier le code. Le plus simple est de brancher directement le PICKit à votre puce, sur votre circuit. Vous trouverez ci-dessous un exemple avec le PIC16F1827. Pour les autres puces, les informations nécessaires sont disponibles dans le tableau récapitulatif des broches de la datasheet.
 
 {: .remind}
 Le branchement direct permet également au PICKit 3 d'alimenter votre circuit, à condition que ce dernier ne soit pas trop exigeant, comme pour des LED.
@@ -64,11 +65,11 @@ Le branchement direct permet également au PICKit 3 d'alimenter votre circuit, �
   <img src="mplab_pickit-5-pic.png" alt="PIC16F1827 pins" />
 </div>
 
-En général trouver le MCLR, VDD et VSS n'est pas très compliqué. Pour les deux derniers (PGD et PGC), chercher dans votre datasheet, soit ces noms ou leur nom entre parenthèse sur la photo gauche ci-dessus (ICSPDAT et ICSPCLK).
+En général, trouver le MCLR, VDD et VSS n'est pas très compliqué. Pour les deux derniers (PGD et PGC), consultez votre datasheet, soit ces noms, soit leur équivalent entre parenthèses sur la photo à gauche ci-dessus (ICSPDAT et ICSPCLK).
 
 ## Problèmes
 ### PICKit 3 non détécté par MPLAB
 
-Si vous rencontrez cette erreur au lancement de MPLab IDE avec votre boîtier branché, désinstallez-le puis installez une version plus ancienne de MPLab IDE. Votre version actuelle est probablement trop récente et ne prend pas encore en charge le PICKit 3.
+Si vous rencontrez cette erreur au lancement de MPLAB IDE avec votre boîtier branché, désinstallez-le puis installez une version plus ancienne de MPLAB IDE. Votre version actuelle est probablement trop récente et ne prend pas encore en charge le PICKit 3.
 
 ![alt text](mplab_pickit-1.png)

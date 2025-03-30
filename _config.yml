@@ -23,7 +23,7 @@ email: your-email@example.com
 author: "Mathis Morais"
 locale: fr_FR
 description: >- # this means to ignore newlines until "baseurl:"
-  Documentation sur les microcontrôleurs PIC Microchip, 
+  Documentation sur les microcontroleurs PIC Microchip, 
   abordant à la fois la partie matérielle et logicielle.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

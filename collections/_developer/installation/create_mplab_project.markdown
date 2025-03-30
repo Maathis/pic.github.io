@@ -10,20 +10,20 @@ nav_order: 3
 
 # Créer un projet MPLab X IDE
 
-Lancer MPLab X IDE, ouvrer la liste déroulante "File" et cliquez sur "New Project"
+Lancez MPLab X IDE, ouvrez la liste déroulante "File" et cliquez sur "New Project"
 
 ![alt text](mplab_create_projet_1.png)
 
-Sur la fenête qui s'ouvre, rendez-vous dans "Microchip Embedded", puis "Application Project(s)" et cliquer sur "Next".
+Sur la fenêtre qui s'ouvre, rendez-vous dans "Microchip Embedded", puis "Application Project(s)" et cliquez sur "Next".  
 ![alt text](mplab_create_projet_2.png)
 
-Dans le champ "Device", séléctionner votre microcontrolleur, puis cliquer sur "Next".
+Dans le champ "Device", sélectionnez votre microcontrôleur, puis cliquez sur "Next".  
 ![alt text](mplab_create_projet_3.png)
 
-Ne séléctionner aucun "Supported Debug Header" et cliquer sur "Next".
+Ne sélectionnez aucun "Supported Debug Header" et cliquez sur "Next".
 
-Séléctionner votre compilateur, et cliquer sur "Next".
+Sélectionnez votre compilateur, puis cliquez sur "Next".  
 ![alt text](mplab_create_projet_4.png)
 
-Entrer le nom de votre projet, séléctionner l'endroit où vous voulez le créer et cliquer sur "Finish".
+Entrez le nom de votre projet, sélectionnez l'endroit où vous voulez le créer et cliquez sur "Finish".  
 ![alt text](mplab_create_projet_5.png)

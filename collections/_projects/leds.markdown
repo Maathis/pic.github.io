@@ -10,29 +10,32 @@ nav_order: 1
 
 # Projet : Allumer des leds
 
-Ce projet est simple, nous prenons 3 leds qui doivent s'allumer chacune leur tour puis s'éteindre en boucle.
+Ce projet est simple, nous prenons 3 LEDs qui doivent s'allumer chacune leur tour puis s'éteindre en boucle.
 
 ## Branchements
 
-Le circuit est allimenté par le kit de developpement (PICKit).
+Le circuit est alimenté par le kit de développement (PICKit).
 
 pickit_2 = 4.75V | pickit_3 = GND
 
 ![alt text](pr1-schema.png)
 
-## Configuration du microcontrolleur
+## Configuration du microcontrôleur
 
-Réferrez-vous à cette partie pour la base : [Générer le code de base](/developer/gen-codebase)
+Référez-vous à cette partie pour la base : [Générer le code de base](/developer/gen-codebase)
 
-Rendez-vous dans l'onglet "Application builder", cliquer sur "Pins", un onglet s'ouvre.
+Rendez-vous dans l'onglet "Application Builder", cliquez sur "Pins", un onglet s'ouvre.
+
 ![alt text](pr1-gen-codebase-1.png)
 
-Définiser les ports B : 1, 2 et 3 en sortie (output). Cliquer sur les cadenas pour qu'ils deviennent vert.
+Définissez les ports B : 1, 2 et 3 en sortie (output). Cliquez sur les cadenas pour qu'ils deviennent verts.
 
 ![alt text](pr1-gen-codebase-2.png)
 
-Générer le code de base en cliquant sur le bouton "Generate" dans l'onglet "Project Resources".
+Générez le code de base en cliquant sur le bouton "Generate" dans l'onglet "Project Resources".
+
 ![alt text](pr1-gen-codebase-3.png)
+
 
 ## Code
 
