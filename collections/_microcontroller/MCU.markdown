@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: C'est quoi un microcontrolleur ?
+title: C'est quoi un microcontrôleur ?
 layout: page
 permalink: /:collection/:name
 nav_order: 1
